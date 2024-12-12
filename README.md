@@ -1,7 +1,7 @@
 # Multilang Switcher
 
 **Version:** 1.0.1  
-**Author:** Your Name  
+**Author:** Technoeye 
 **License:** GPLv2 or later  
 **Requires at least:** WordPress 5.0  
 **Tested up to:** WordPress 6.3  
