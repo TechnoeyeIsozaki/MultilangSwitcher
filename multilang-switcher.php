@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Multilang Switcher
- * Plugin URI:  https://example.com
+ * Plugin URI:  https://www.technoeye.com
  * Description: シンプルな多言語切り替えプラグイン。ユーザーが選択した言語(ロケール)をセッションに保持します。
  * Version:     1.0.0
- * Author:      Your Name
- * Author URI:  https://example.com
+ * Author:      Technoeye
+ * Author URI:  https://www.technoeye.com
  * License:     GPL2
  * Text Domain: multilang-switcher
  * Domain Path: /languages
