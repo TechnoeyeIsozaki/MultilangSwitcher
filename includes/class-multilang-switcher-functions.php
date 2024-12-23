@@ -24,6 +24,7 @@ if ( ! function_exists( 'multilang_switcher_get_languages' ) ) {
 	function multilang_switcher_get_languages() {
 		$languages = array(
 			'ja'    => '日本語',
+			'ja_ruby' => 'やさしい日本語',
 			'en_US' => 'English',
 			'zh_CN' => '简体中文',
 			'ko'    => '한국어',
