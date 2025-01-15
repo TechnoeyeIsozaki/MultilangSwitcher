@@ -6,13 +6,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 // 利用可能な言語配列を関数から取得
 $languages = multilang_switcher_get_languages();
 ?>
-<form method="post" action="">
-	<label for="multilang_switcher_locale"><?php _e('Select Language', 'multilang-switcher'); ?></label>
-	<select name="multilang_switcher_locale" id="multilang_switcher_locale" onchange="this.form.submit();">
+<form method="post" action="" id="language-switcher-form">
+	<ul id="multilang_switcher_locale" class="lang-switcher__menu">
 		<?php foreach ( $languages as $lang_code => $label ): ?>
-			<option value="<?php echo esc_attr( $lang_code ); ?>" <?php selected( $lang_code, $current_locale ); ?>>
+			<li data-locale="<?php echo esc_attr( $lang_code ); ?>" <?php if ($lang_code === $current_locale) echo 'class="selected"'; ?>>
 				<?php echo esc_html( $label ); ?>
-			</option>
+			</li>
 		<?php endforeach; ?>
-	</select>
+	</ul>
+	<input type="hidden" name="multilang_switcher_locale" id="selected-locale" value="">
 </form>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	const listItems = document.querySelectorAll('#multilang_switcher_locale li');
+	const form = document.getElementById('language-switcher-form');
+	const hiddenInput = document.getElementById('selected-locale');
+
+	listItems.forEach(item => {
+		item.addEventListener('click', function() {
+			hiddenInput.value = this.getAttribute('data-locale');
+			form.submit();
+		});
+	});
+});
+</script>
