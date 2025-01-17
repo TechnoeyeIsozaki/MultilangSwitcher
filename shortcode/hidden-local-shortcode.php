@@ -12,7 +12,7 @@
 function hidden_locale() {
     $locale = isset( $_SESSION['multilang_current_locale'] ) ? $_SESSION['multilang_current_locale'] : 'ja';
 
-    $output = '<input type="hidden" id="multilang_switcher_locale" name="multilang_switcher_locale" value="' . esc_attr( $locale ) . '" />';
+    $output = '<input type="hidden" id="current_locale" name="current_locale" value="' . esc_attr( $locale ) . '" />';
 
     return $output;
 }
