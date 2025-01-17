@@ -27,6 +27,11 @@ require_once MULTILANG_SWITCHER_DIR . 'includes/class-multilang-switcher-session
 require_once MULTILANG_SWITCHER_DIR . 'includes/class-multilang-switcher-functions.php';
 require_once MULTILANG_SWITCHER_DIR . 'public/class-multilang-switcher-public.php';
 
+// ショートコードを追加する外部ファイルを読み込む
+foreach (glob(plugin_dir_path(__FILE__) . 'shortcode/*.php') as $file) {
+    require_once $file;
+}
+
 // プラグイン初期化
 function multilang_switcher_init() {
 	$plugin = new Multilang_Switcher();
