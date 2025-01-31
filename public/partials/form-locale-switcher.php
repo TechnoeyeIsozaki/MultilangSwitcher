@@ -29,5 +29,14 @@ document.addEventListener('DOMContentLoaded', function() {
 			form.submit();
 		});
 	});
+	
+	// ruby-buttonがクリックされたときの処理を追加
+	const rubyButton = document.getElementById('ruby-button');
+	if (rubyButton) {
+		rubyButton.addEventListener('click', function() {
+			hiddenInput.value = 'ja_ruby';
+			form.submit();
+		});
+	}
 });
 </script>
